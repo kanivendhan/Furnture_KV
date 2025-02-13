@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title> <!-- Corrected title -->
+    <link rel="stylesheet" href="singin.css">
+    <style>
+        /* Added some basic styles for centering */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html"><button id="back" style="margin-top:15% ;">◀ Back To Home</button></a>
+
+    <div class="box" id="box">
+        <div class="box1">
+        </div>
+        <div class="box2">
+            <center>
+            <br><br>
+            <h3>Sign in to <br> KV's Furniture</h3><br>
+            <p>*Enter Your Name :</p>
+            <input type="text" id="username">
+            <div id="usernameError" class="error"></div>
+            <p>*Enter phone/Email :</p>
+            <input type="text" id="email">
+            <div id="emailError" class="error"></div>
+            <p>*Make Your Password :</p>
+            <input type="password" id="password">
+            <div id="passwordError" class="error"></div>
+            <button type="button" id="registerButton">Register</button> <!-- Changed type to button -->
+            </center>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerButton').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            document.getElementById('usernameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+
+        
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            let isValid = true;
+
+            
+            if (username === '') {
+                document.getElementById('usernameError').innerText = 'Username is required.';
+                isValid = false;
+            }
+
+           
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Completed email pattern
+            if (email === '' || !emailPattern.test(email)) {
+                document.getElementById('emailError').innerText = 'Valid email is required.';
+                isValid = false;
+            }
+
+            
+            if (password === '') {
+                document.getElementById('passwordError').innerText = 'Password is required.';
+                isValid = false;
+            }
+            if (isValid) {
+                alert('Registration successful!'); 
+            }
+        });
+    </script>
+</body>
+
+</html>
