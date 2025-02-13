@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart">
+            <div class="cart-item">
+                <img src="bed1.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>Partner Bed</h2>
+                    <p> ₹10,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="sofa1.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>Single sofa</h2>
+                    <p> ₹8,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="bed2.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>Wooden Bed</h2>
+                    <p> ₹10,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="sofa2.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>Compact sofa</h2>
+                    <p> ₹8,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="bed3.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>Double Bed</h2>
+                    <p> ₹10,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="sofa3.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>black sofa</h2>
+                    <p> ₹8,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="bed4.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>Single Bed</h2>
+                    <p> ₹10,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="cart-item">
+                <img src="sofa4.webp" alt="Product Image">
+                <div class="item-details">
+                    <h2>Ordinary sofa</h2>
+                    <p> ₹8,000</p>
+                    <input type="number" value="1" min="1" class="quantity">
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div class="total">
+                <h2>Total:  ₹72,000</h2>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <script >
+  document.addEventListener("DOMContentLoaded", function() {
+            // Get all the remove buttons
+            const removeButtons = document.querySelectorAll('.remove-btn');
+
+            // Loop through each button and add a click event listener
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Get the cart item that contains this button
+                    const cartItem = this.closest('.cart-item');
+                    // Remove the cart item from the DOM
+                    cartItem.remove();
+                    // Update the total price
+                    updateTotal();
+                });
+            });
+
+            // Function to update the total price
+            function updateTotal() {
+                const cartItems = document.querySelectorAll('.cart-item');
+                let total = 0;
+
+                cartItems.forEach(item => {
+                    const priceText = item.querySelector('p').innerText; // Get the price text
+                    const price = parseInt(priceText.replace('₹', '').replace(',', '').trim()); // Convert to number
+                    const quantity = item.querySelector('.quantity').value; // Get the quantity
+                    total += price * quantity; // Calculate total
+                });
+
+                // Update the total display
+                const totalDisplay = document.querySelector('.total h2');
+                totalDisplay.innerText = `Total: ₹${total.toLocaleString()}`; // Format total with commas
+            }
+        });
+    </script>
+</body>
+</html>
