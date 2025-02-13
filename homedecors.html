@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="homedecors.css">
+    <title>Homedecors</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo"></div>
+        <h1 id="logotext">Furniture's</h1>
+        <div class="search"  style = ><input type="search" placeholder="       Search Furniture's..."
+            style="height: 40px;width: 200px; background-color: rgb(236, 229, 229);border: none; outline: none; padding-left: 20px;padding-right: 10px;">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="black"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+        </div>
+        <ul>
+            <li id="home"><a href="index.html" style="color:snow; text-decoration: none;font-size: 13px;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="snow">
+                        <path
+                            d="M200-160v-366L88-440l-48-64 440-336 160 122v-82h120v174l160 122-48 64-112-86v366H520v-240h-80v240H200Zm80-80h80v-240h240v240h80v-347L480-739 280-587v347Zm120-319h160q0-32-24-52.5T480-632q-32 0-56 20.5T400-559Zm-40 319v-240h240v240-240H360v240Z" />
+                    </svg><br> HOME</a> </li>
+            <li id="profile"><a href="#" style="color:snow; text-decoration: none;font-size: 13px;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="snow">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                        
+                        </svg><br> PROFILE</a>
+                        <div class="login-page">
+                           <center>
+                           <a href="login.html"> <button id="log">Log in</button> </a> <br>
+                           <a href="singin.html"><button id="sing">Sing in</button> </a> <br><br><br>  
+                            <input type="checkbox" name="" id="" >I Already have a Account
+                           </center>
+                        </div></li>
+            <li id="cart"><a href="cart.html" style="color:snow; text-decoration: none;font-size: 13px;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="snow">
+                        <path
+                            d="m40-240 20-80h220l-20 80H40Zm80-160 20-80h260l-20 80H120Zm623 240 20-160 29-240 10-79-59 479ZM240-80q-33 0-56.5-23.5T160-160h583l59-479H692l-11 85q-2 17-15 26.5t-30 7.5q-17-2-26.5-14.5T602-564l9-75H452l-11 84q-2 17-15 27t-30 8q-17-2-27-15t-8-30l9-74H220q4-34 26-57.5t54-23.5h80q8-75 51.5-117.5T550-880q64 0 106.5 47.5T698-720h102q36 1 60 28t19 63l-60 480q-4 30-26.5 49.5T740-80H240Zm220-640h159q1-33-22.5-56.5T540-800q-35 0-55.5 21.5T460-720Z" />
+                    </svg><br> CART</a>
+                    <div class="cart-page">
+                        <center>
+                            <br>
+                        </a> <button   id="cart-button"> <a href="cart.html" style="text-decoration: none;"> Go to cart </a></button><br><br><br>  
+                        <p> View Cart list items</p>
+                      </center>
+                   </div></li>
+        </ul>
+        <div class="burger" onclick="showSidebar()">
+            <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#000000">
+                <path
+                    d="M120-240v-80h520v80H120Zm664-40L584-480l200-200 56 56-144 144 144 144-56 56ZM120-440v-80h400v80H120Zm0-200v-80h520v80H120Z" />
+            </svg>
+
+        </div>
+    </nav>
+    <header id="sidebar">
+        <div class="close" onclick="hideSidebar()"
+            style="list-style-type: none;height: 4vh;width: 4vh;margin-left: 80%;margin-top: 5%;"><svg
+                xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000">
+                <path
+                    d="m336-280 144-144 144 144 56-56-144-144 144-144-56-56-144 144-144-144-56 56 144 144-144 144 56 56ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+            </svg></div>
+        <div class="ul2">
+            <li> <a href="sofa.html" >Sofa</a></li>
+            <li><a href="bedroom.html" >Bedroom</a></li>
+            <li><a href="homedecors.html" style="color:red ;">Home Decor</a></li>
+            <li><a href="kitchen.html">Dining & Kitchen</a></li>
+            <li> <a href="login.html" id="ltxt">Login</a> </li>
+            <li> <a href="singin.html" id="stxt"> Singin</a> </li>
+        </div>
+    </header>
+    <div class="content">
+        <br>
+        <center>
+            <h1>Home Decor's</h1><br>
+            <div class="banner">
+
+            </div><br><br>
+            <h1>Check Out These Collections</h1><br><br>
+            <div class="banner1">
+                <div class="banner2"></div>
+                <div class="banner3"></div>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#0099ff" fill-opacity="1"
+                    d="M0,32L34.3,26.7C68.6,21,137,11,206,58.7C274.3,107,343,213,411,234.7C480,256,549,192,617,186.7C685.7,181,754,235,823,261.3C891.4,288,960,288,1029,256C1097.1,224,1166,160,1234,133.3C1302.9,107,1371,117,1406,122.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+                </path>
+            </svg>
+        </center>
+    </div>
+    <div class="content2" >
+        <br><br>
+        <center>
+            <h1 onclick="hideDetails()"  >Trending</h1><br>
+            <div class="sofaspro" >
+                <div class="sofa1" onclick="showDetails()" >
+                    <div class="price1">
+                        <h3>Hoshi Queen</h3>
+                        <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                                ₹25,186</strike><span
+                                style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(33% off)</span>
+                        </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹16,999 MRP </span>
+                    </div>
+                    <br><br>
+                    <button style="background:green ;" id="kv"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="kv2"> <strong> Add to cart </strong></button>
+                        <center> <H1 id="uv3" style="color:transparent ;display: none;cursor: pointer;font-size: 18px;">Cancel</H1></center>
+                </div>
+                <div class="sofa2"  onclick="showDetails2()" >
+                    <div class="price2">
+                        <h3>Gilbert right</h3>
+                        <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                                ₹40,041 </strike><span
+                                style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(27% off)</span>
+                        </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹23,299 MRP </span>
+                    </div>
+                    <br><br>
+                    <button style="background:green ;" id="v2"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="v3"> <strong> Add to cart </strong></button>
+ 
+                </div>
+                <div class="sofa3"  onclick="showDetails3()">
+                    <div class="price3">
+                        <h3>Martin Horse</h3>
+                        <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                            ₹48,041  </strike><span
+                                style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(50% off)</span>
+                        </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹24,020  MRP </span>
+                        <br><br>
+                        <button style="background:green ;" id="v4" > <strong> Buy now </strong></button><br>
+                        <button style="background:rgb(0, 102, 255) ;" id="v5"> <strong> Add to cart </strong></button>
+         </div>
+               
+                </div>
+                <div class="sofa4"  onclick="showDetails4()">
+                    <div class="price4">
+                        <h3>Hinko amero</h3>
+                        <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                            ₹38,999  </strike><span
+                                style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(18% off)</span>
+                        </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹31,999 MRP </span>
+                    </div>
+                    <br><br>
+                    <button style="background:green ;" id="v6"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="v7"> <strong> Add to cart </strong></button>
+ 
+                </div>
+                <div class="sofa5"  onclick="showDetails5()">
+                    <div class="price5">
+                        <h3>ansi jaamero</h3>
+                        <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                            ₹42,499</strike><span
+                                style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(19% off)</span>
+                        </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹34,499 MRP </span>
+                    </div>
+                    <br><br>
+                    <button style="background:green ;" id="v8"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="v9"> <strong> Add to cart </strong></button>
+   
+                </div>
+                <div class="sofa6"  onclick="showDetails6()">
+                    <div class="price6">
+                        <h3>Jessi</h3>
+                        <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                            ₹21,999 </strike><span
+                                style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(41% off)</span>
+                        </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹12,999  MRP </span>
+                    </div>
+                    <br><br>
+                    <button style="background:green ;" id="v10"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="v11"> <strong> Add to cart </strong></button>
+ 
+                </div>
+            </div>
+        </center>
+    </div>
+    <div class="content3">
+        <center>
+            <div class="ndsofa">
+                <div class="sofa7"  onclick="showDetails7()"><div class="price7"><h3>Sheesham</h3>
+                    <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                        ₹33,999 </strike><span
+                            style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(21% off)</span>
+                    </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹26,999 MRP </span></div> <br><br>
+                    <button style="background:green ;" id="v12"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="v13"> <strong> Add to cart </strong></button>
+ </div>
+                    
+                    <div class="sofa8"  onclick="showDetails8()"><div class="price8"><h3>Valvot</h3>
+                    <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                        ₹29,346</strike><span
+                            style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(49% off)</span>
+                    </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹14,999 MRP </span></div><br><br>
+                    <button style="background:green ;" id="v14"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="v15"> <strong> Add to cart </strong></button>
+ </div>
+                <div class="sofa9"  onclick="showDetails9()"><div class="price9"><h3>Justin</h3>
+                    <p> <strike style="color: rgb(53, 51, 51) ;font-size: 12px;text-shadow: 0px 0px 10px black;">
+                        ₹69,999 </strike><span
+                            style="color:orange;text-shadow: 0px 0px 10px black; font-size:12px;">(23% off)</span>
+                    </p><span style="color: blue;text-shadow: 0px 0px 2px rgb(53, 52, 52);"> ₹53,999  MRP </span></div><br><br>
+                    <button style="background:green ;" id="v16"> <strong> Buy now </strong></button><br>
+                    <button style="background:rgb(0, 102, 255) ;" id="v17"> <strong> Add to cart </strong></button>
+ </div>
+            </div><br><br><br><br>
+            <div class="tree">
+            
+            </div>
+        </center>
+       
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgb(241, 152, 64)" fill-opacity="1" d="M0,64L40,85.3C80,107,160,149,240,165.3C320,181,400,171,480,154.7C560,139,640,117,720,128C800,139,880,181,960,170.7C1040,160,1120,96,1200,58.7C1280,21,1360,11,1400,5.3L1440,0L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+    </div>
+    <footer class="foot2">
+        <div class="footimg1">
+            <h3 id="we">We accept</h3>
+            <div class="vis1"></div>
+            <div class="vis2"></div>
+            <div class="vis3"></div>
+            <div class="vis4"></div>
+        </div>
+        <ul class="footimg3">
+            <li>RuPay</li>
+            <li>Maestro</li>
+            <li>AmericanExpress</li>
+            <li>MasterCard</li>
+        </ul>
+        <div class="footimg2">
+            <h3 id="like">Like What You See? Follow us Here</h3>
+            <div class="vis5"></div>
+            <div class="vis6"></div>
+            <div class="vis7"></div>
+            <div class="vis8"></div>
+        </div>
+        <ul class="footimg4">
+            <li>Youtube</li>
+            <li>Facebook</li>
+            <li>Instagram</li>
+            <li>Tiwitter</li>
+        </ul>
+        <div class="last">
+            <center>
+                <br><br>
+                <p>Whitehat
+                    Sitemap
+                    Terms Of Use
+                    Privacy Policy
+                    Your Data and Security
+                    Grievance Redressal</p><br>
+                    © Copyright KV'S Furniture Limited
+    
+    
+            </center>
+        </div>
+    </footer>
+</body>
+<script>
+    function showSidebar() {
+        const show = document.getElementById('sidebar');
+        show.style.display = 'block'
+
+    }
+
+    function hideSidebar() {
+        const show = document.getElementById('sidebar');
+        show.style.display = 'none'
+    }
+
+    function showDetails() {
+        const show = document.getElementById('kv');
+        const show2 = document.getElementById('kv2');
+
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails() {
+       const show = document.getElementById('kv');
+        const show2 = document.getElementById('kv2');
+
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }
+    function showDetails2() {
+        let show = document.getElementById('v2');
+        let show2 = document.getElementById('v3');
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails2() {
+        let show = document.getElementById('v2');
+        let show2 = document.getElementById('v3');
+
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }
+         function showDetails3() {
+        const show3 = document.getElementById('v4');
+        const show4 = document.getElementById('v5');
+        show3.style.display = 'block'
+        show4.style.display = 'block'
+
+
+    }
+    
+    function hideDetails3() {
+        const show3 = document.getElementById('v4');
+        const show4 = document.getElementById('v5');
+
+    
+        show3.style.display = 'none'
+        show4.style.display = 'none'
+    }   
+     function showDetails4() {
+        let show = document.getElementById('v6');
+        let show2 = document.getElementById('v7');
+
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails4() {
+        let show = document.getElementById('v6');
+        let show2 = document.getElementById('v7');
+
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }    function showDetails5() {
+        let show = document.getElementById('v8');
+        let show2 = document.getElementById('v9');
+
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails5() {
+        let show = document.getElementById('v8');
+        let show2 = document.getElementById('v9');
+
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }    function showDetails6() {
+        let show = document.getElementById('v10');
+        let show2 = document.getElementById('v11');
+
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails6() {
+        let show = document.getElementById('v10');
+        let show2 = document.getElementById('v11');
+
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }    function showDetails7() {
+        let show = document.getElementById('v12');
+        let show2 = document.getElementById('v13');
+
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails7() {
+        let show = document.getElementById('v12');
+        let show2 = document.getElementById('v13');
+        let show3 = document.getElementById('v');
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }    function showDetails8() {
+        let show = document.getElementById('v14');
+        let show2 = document.getElementById('v15');
+
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails8() {
+        let show = document.getElementById('v14');
+        let show2 = document.getElementById('v15');
+
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }    function showDetails9() {
+        let show = document.getElementById('v16');
+        let show2 = document.getElementById('v17');
+
+        show.style.display = 'block'
+        show2.style.display = 'block'
+
+
+    }
+    
+    function hideDetails9() {
+        let show = document.getElementById('v16');
+        let show2 = document.getElementById('v17');
+
+    
+        show.style.display = 'none'
+        show2.style.display = 'none'
+    }
+</script>
+
+</html>
