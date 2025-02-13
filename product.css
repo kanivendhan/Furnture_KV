@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+x button{
+    margin-left: 5%;
+    width: 10%;
+    height: 35px;
+    width: 130px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 3%;
+    background-color: blue;
+    color: snow;
+    font-size: 16px;
+}
+X button:hover{
+    cursor: pointer;
+    background-color: #45a049;
+}
+img{
+    width: 50%;
+}
+h1{
+    margin-left: 15%;
+}
+r{
+    margin-left: 20%;
+    color: red;
+}
+h2{
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.det{
+    margin-left: 60%;
+    margin-top: -30%;
+    font-size: 20px;
+}
+big{
+    font-weight: bold;
+}
+.img{
+    height: 50%;
+    width: 40%;
+    background-size: cover;
+    display: flex;
+    overflow-x: scroll;
+    margin-top: -15%;
+    margin-left: 5%;
+}
+.img img{
+    height: 50%;
+    width: 100%;
+    background-size: contain;
+}
